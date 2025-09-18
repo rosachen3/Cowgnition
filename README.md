@@ -4,7 +4,7 @@ Developer Names:
 
 Date of project start:
 
-This project is ...
+This project is ... we do not know yet
 
 The folders and files for this project are as follows:
 
