@@ -92,7 +92,7 @@ New Branches will be created to track work done on a feature, issue, or task. Th
 
 For example:  \\
 
-\textless Add \textunderscore Menu \textunderscore Options-CN \\
+Add\textunderscore Menu\textunderscore Options-CN \\
 
 When a feature is ready to be merged, a merge request for the feature branch into main will be created. It must be reviewed by at least one separate team member, to the author’s discretion based on availability and/or knowledge of the topic. Once the review has passed, the branch may be merged into main and the team notified to pull recent changes.  \\
 
@@ -153,7 +153,18 @@ Topics to discuss include the following:
 
 \section{Coding Standard}
 
-\wss{What coding standard will you adopt?}
+The team will follow several predetermined standards for branch names, commit messages, and coding. As outlined in Section 7, branch names will follow the following format:  \\
+
+\textless Issue\textunderscore Name\textgreater-\textless AuthorInitials \textgreater-\textless SecondaryAuthorInitials\textgreater \\
+
+For example:  \\
+
+Add\textunderscore Menu\textunderscore Options-CN \\
+
+The team will endeavor to have meaningful and focused commit messages. For maximum readability and cohesion between contributors, the team will follow the standards outlined in 
+\href{https://www.conventionalcommits.org/en/v1.0.0/} {Conventional Commits}.  \\
+
+The team is expecting to code in Python and follow the PEP8 coding standard. To ensure that the standard is met, the team will use Ruff as a linter and formatter. Each function is expected to have a block header comment with a brief description of the function’s task, dependencies, inputs and outputs. Variables should be named in camel case.  \\
 
 \newpage{}
 
