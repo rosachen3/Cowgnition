@@ -1,7 +1,9 @@
 \documentclass{article}
-
+\usepackage{float}
 \usepackage{booktabs}
 \usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{float}
 
 \title{Development Plan\\\progname}
 
@@ -89,36 +91,141 @@ summarize the lecture's key points and indicate the people that attended the lec
 
 \section{Team Member Roles}
 
-\wss{You should identify the types of roles you anticipate, like notetaker,
-leader, meeting chair, reviewer.  Assigning specific people to those roles is
-not necessary at this stage.  In a student team the role of the individuals will
-likely change throughout the year.}
+For the remainder of this project, we will work collaboratively as a team following assumed roles to develop the Cow-puter Vision project. These defined roles may have different assignees at different stages of the project, as team members may wish to rotate between the roles.
+The table below contains a list of all the roles and respective descriptions that are believed to be essential to ensure successful collaboration and achievement of the project goals:
+
+\subsection{Non-technical Roles}
+\begin{table}[ht]
+\centering
+\caption{Non-technical roles and descriptions}
+\label{tab:non-technical-roles}
+\begin{tabularx}{\textwidth}{lX}
+\toprule
+\textbf{Role} & \textbf{Description} \\
+\midrule
+
+Team Liaison & Acts as the main point of contact between the team and supervisors and stakeholders.  \\ \\
+Notetaker & Records meeting minutes, lecture notes, and sets agenda. \\ \\
+Meeting Chair & Facilitates team discussions, ensuring that the team remains focused on the meeting agenda without going off on tangents. \\ \\
+Backlog Manager & Creates, tracks, and assigns project-related GitHub issues based on deliverable sections and sets their priority based on deadlines and business value.\\ \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\noindent\textbf{Important Note:} Backlog Manager is not soley responsible for creating GitHub issues, and is only responsible for creating issues based on the deliverable sections. Example: Backlog
+Manager is responsible for creating issues such as "Complete section 1.1" and "Review section 1.1". Issues involving very specific tasks, 
+that are not clearly outlined or sectioned on deliverable templates, such as fixing specific bugs, fall under the responsibility of 
+the team member(s) who encounters the issue or task to begin with.\\
+
+\subsection{Technical Roles}
+\begin{table}[H]
+\centering
+\caption{Technical roles and descriptions}
+\label{tab:technical-roles}
+\begin{tabularx}{\textwidth}{lX}
+\toprule
+\textbf{Role} & \textbf{Description} \\
+\midrule
+
+Computer Vision \& ML Engineer & Responsible for leading design and development of the ML model, including model training and evaluation of the computer vision models using the preprocessed cow data, as well as ensuring that the model achieves satisfactory performance.\\ \\
+Data Pipeline Engineer &  Responsible for leading the collection, organization and preprocessing of the raw image/video data, ensuring it is properly labeled and cleaned, and preparing it into standardized datasets ready for model training and evaluation.\\ \\
+Backend \& Integration Engineer  & Responsible for leading the development of APIs or services that connect the trained model to the frontend, and manages a database to store any necessary data, ensuring smooth communication between components and managing data flow through the system \\ \\
+Frontend \& UI/UX Engineer  & Responsible for leading the design and development of interface for farmers to interact with, and ensure that the necessary results are clearly displayed to them. \\ \\
+Deployment \& Testing Lead & Responsible for ensuring that the model deploys to the target environment, testing and validating the accuracy and reliability of the system, running end-to-end tests, and fixing integration issues\\ \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
 
 \section{Workflow Plan}
 
-\begin{itemize}
-	\item How will you be using git, including branches, pull request, etc.?
-	\item How will you be managing issues, including template issues, issue
-	classification, etc.?
-  \item Use of CI/CD
-\end{itemize}
+GitHub will be used to manage the team’s codebase and contributions. The main branch will house finished code that the team has worked on together and agreed needs no further editing, pending a design change or feedback.\\  
+
+New Branches will be created to track work done on a feature, issue, or task. The branch name will follow the following format: \\ 
+
+\textless Issue\textunderscore Name\textgreater-\textless AuthorInitials \textgreater-\textless SecondaryAuthorInitials\textgreater \\
+
+For example:  \\
+
+Add\textunderscore Menu\textunderscore Options-CN \\
+
+When a feature is ready to be merged, a merge request for the feature branch into main will be created. It must be reviewed by at least one separate team member, to the author’s discretion based on availability and/or knowledge of the topic. Once the review has passed, the branch may be merged into main and the team notified to pull recent changes.  \\
+
+GitHub issues will be used to track meeting minutes, lecture notes, meeting agendas, and planned features to implement. Features will be assigned to the developer, and meeting minutes/agendas/lecture notes will be assigned to the attendees for record. GitHub project boards will be used to track features and fixes planned to be implemented. The team will use a Kanban Board to track the implementation status of the GitHub Issues mentioned above.  The team will rotate through who’s responsibility it is to update the Kanban Board and Issues.  \\
+
+Formal feedback on a teammate’s code should be done during the review phase of a merge request, or during development. Feedback done during review may be in the form of comments on a merge request, or in person. If feedback is given after a branch is merged, the team must discuss together what must be changed, and if necessary, a new branch may be opened and immediately approved as a hotfix branch. If the changes are more elaborate, a new branch must be opened and follow usual branch review and merge procedures.  \\
 
 \section{Project Decomposition and Scheduling}
 
+\subsection{Github Projects}
+Github Projects will be used for project management of tasks. The group will use the Kanban board feature on Github projects to assign tasks. Tasks will be categorized under milestones and will be assigned to individual team members. They can take on one of three states: 
 \begin{itemize}
-  \item How will you be using GitHub projects?
-  \item Include a link to your GitHub project
+  \item \underline{To do:} Tasks that are backlogged and are not currently being worked on. 
+  \item \underline{In progress:} Tasks that are currently being worked on.
+  \item \underline{Done:} Completed tasks that have been reviewed by another member and approved.
 \end{itemize}
 
-\wss{How will the project be scheduled?  This is the big picture schedule, not
-details. You will need to reproduce information that is in the course outline
-for deadlines.}
+\noindent Github Issues will also be used to track team meeting agendas, supervisor meetings, lecture notes, TA meetings, and peer reviews. The link to the Github repository where the project can be found will be linked \underline{\href{https://github.com/rosachen3/Cowgnition/tree/main}{here}}.
+
+\subsection{Schedule}
+The project will follow the major deadlines outlined below. Each task will have subtasks assigned as the semester progresses. These can be tracked in the Github Projects Kanban Board.
+
+\begin{table}[H]
+
+\centering
+\caption{List of Milestone Deadlines}
+\begin{tabularx}{\textwidth}{|l|X|}
+\hline
+\textbf{Milestone} & \textbf{Due Date} \\
+\hline
+Team formation and Project Selection & September 15 \\
+\hline
+Problem Statement, Goals and Development Plan & September 22 \\
+\hline
+SRS + HA & October 6 \\
+\hline
+V\&V Plan Revision 0 & October 27 \\
+\hline
+Design Documentation Revision -1 & November 10 \\
+\hline
+Proof of Concept Demonstration & November 17 \\
+\hline
+Design Document Revision 0 & January 19 \\
+\hline
+Revision 0 Presentation & February 2 \\
+\hline
+V and V Report and Extras Revision 0 & March 9 \\
+\hline
+Final Demonstration (Revision 1) & March 23 \\
+\hline
+Final Documentation (Revision 1) & April 6 \\
+\hline
+EXPO Demonstration & TBD \\
+\hline
+\end{tabularx}
+\end{table}
 
 \section{Proof of Concept Demonstration Plan}
 
-What is the main risk, or risks, for the success of your project?  What will you
-demonstrate during your proof of concept demonstration to convince yourself that
-you will be able to overcome this risk?
+CATTLEytics will be providing video training data from local partnering farmers. The videos will be used to analyze and categorize cows based on behaviours and physical traits.  
+
+\vspace{1em}
+
+\noindent The following risks have been identified to evaluate the feasibility of the project. 
+
+\vspace{1em}
+
+\begin{itemize}
+  \item \noindent \textbf{Farmer Partnerships:} CATTLEytics is a small startup company. Currently, there is no video training data as resources are provided as needed when developing new features. There are local farmers who have agreed to send video data, but there is a risk of delays which could slow down development. 
+  \item \noindent \textbf{Data Quality and Quantity:} Machine learning algorithms depend heavily on the data set. There is a risk that the video data collected from farmers will be of low quality or quantity, reducing the accuracy and reliability of the machine learning model. For the Proof of Concept, this risk can be mitigated by using publicly available video data of cows. 
+  \item \noindent \textbf{GPU Resources:} The CAS department at McMaster offers departmental resources for machine learning purposes. As these resources are limited, there is a risk that these resources may not be available when the model needs to be trained. A possible risk mitigation strategy is to leverage the use of cloud-based GPU resources to supplement departmental resources if needed.
+  \item \noindent \textbf{Environmental Requirements:} Farmers in rural communities may have limited hardware and connectivity. If a system is too resource intensive, farmers may face challenges using the system effectively. For the Proof of Concept, this risk can be mitigated by demonstrating the usage of processing and analyzing collected video data in a controlled environment, without requiring real-time analysis. 
+  \item \noindent \textbf{Implementation:} Team members have limited experience with machine learning problems. As a result, researching about existing open-source models and fundamentals may lead to delays. However, the project will be supervised by Luke Schuurman from CATTLEytics who can provide technical advice from a software engineering standpoint. 
+  \item \noindent \textbf{Licensing:} Many popular frameworks and pretrained models have licenses that prohibit commercial use. While this may not impact the Proof of Concept, the licenses can become a risk as the project progresses into a commercially available product. This risk can be mitigated by documenting the licenses of all tools and commercially available alternatives.
+\end{itemize}
+
+\noindent \textbf{POC Plan:} The Proof of Concept will show that the system is functional and that the risks mentioned can be mitigated. This will ensure that the project can be completed on schedule. 
+The demonstration will show that the machine learning model can successfully identify and classify one cow parameter. The demonstration will use a small dataset to validate the system, proving that the model can successfully preprocess and train data using the available GPU resources. The results of the model will be presented in a user-friendly format for farmers to easily access. 
 
 \section{Expected Technology}
 
@@ -156,13 +263,33 @@ Topics to discuss include the following:
 
 \section{Coding Standard}
 
-\wss{What coding standard will you adopt?}
+The team will follow several predetermined standards for branch names, commit messages, and coding. As outlined in Section 7, branch names will follow the following format:  \\
+
+\textless Issue\textunderscore Name\textgreater-\textless AuthorInitials \textgreater-\textless SecondaryAuthorInitials\textgreater \\
+
+For example:  \\
+
+Add\textunderscore Menu\textunderscore Options-CN \\
+
+The team will endeavor to have meaningful and focused commit messages. For maximum readability and cohesion between contributors, the team will follow the standards outlined in 
+\href{https://www.conventionalcommits.org/en/v1.0.0/} {Conventional Commits}.  \\
+
+The team is expecting to code in Python and follow the PEP8 coding standard. To ensure that the standard is met, the team will use Ruff as a linter and formatter. Each function is expected to have a block header comment with a brief description of the function’s task, dependencies, inputs and outputs. Variables should be named in camel case.  \\
 
 \newpage{}
 
 \section*{Appendix --- Reflection}
 
-\textbf{Safwan Khan}
+\textbf{Claire Nielsen, Karim Elbasiouni}
+\begin{enumerate}
+    \item \textit{Why is it important to create a development plan prior to starting the project?}\\
+    It is important to create a development plan prior to starting the project for several reasons. First, it ensures the team is on the same page about the problem to be solved. Second, the development plan will serve as a guideline, not only for technical practices such as coding standards, but also decision making and collaborating as a team.
+    \item \textit{In your opinion, what are the advantages and disadvantages of using CI/CD?}\\
+    An easy disadvantage to notice of CI/CD is the overhead it adds to development. Each team member needs to have the environment configured to test their code to ensure it doesn’t conflict with existing code. Since some teammates may not have experience using it, this can add complexity to the codebase. However, its advantages are substantial. Since the project has so many authors working concurrently, CI/CD will minimize conflicts between merged code and new code, testing small chunks of new code against the existing approved codebase. This makes it faster to pinpoint any errors that appear on a merge and discover how to fix it. Overall, it adds a high overhead to the start of development but this time can be made up later due to the help it provides in continuous testing. 
+    \item \textit{What disagreements did your group have in this deliverable, if any, and how did you resolve them?}\\
+    Since this is the first milestone, the team didn’t have any major disagreements. 
+\end{enumerate}
+
 \begin{enumerate}
     \item \textit{Why is it important to create a development plan prior to starting the
     project?}\\
@@ -209,19 +336,33 @@ interviews, or to get an A+, etc.}
 
 \subsubsection*{Expectations}
 
-\wss{What are your team's expectations regarding meeting attendance (being on
-time, leaving early, missing meetings, etc.)?}
+\begin{itemize}
+  \item \textbf{Weekly Meetings}: With the exception of acceptable excuses and emergencies, team members are expected to attend all meetings. This includes team, supervisor, and TA meetings. Attendance will be logged through the usage of Github Issues. 
+  \item \textbf{Punctuality}: It is expected that all team members arrive on time to meetings. If a group member is expected to be more than 15 minutes late or require to leave early for a meeting, the group should be notified through the designated Microsoft Teams or SMS group chat as soon as possible. If a team member needs to miss a meeting, the member must notify the group with a valid reason the day before. They are responsible for reading the meeting minutes, and organizing an alternative time individually or with another team member to catch up on missed work.
+\end{itemize}
 
 \subsubsection*{Acceptable Excuse}
 
-\wss{What constitutes an acceptable excuse for missing a meeting or a deadline?
-What types of excuses will not be considered acceptable?}
+\textit{The ‘teammate’ used here to describe the teammate missing a meeting/not completing delegated independent work.} \\
+
+Missing an internal deadline is excusable at the team’s discretion, and due to predetermined justification: 
+\begin{itemize}
+    \item Family emergencies 
+    \item Health complications 
+    \item Midterm conflict  \\
+\end{itemize} 
+
+Missing an official deadline/deliverable is not acceptable. In the event of a missed deadline, the team will discuss how to fairly handle the situation and move forward on schedule.  \\
+
+In the event of a missed meeting, it is the responsibility of the teammate that missed the meeting to catch up on their own time, using the meeting minutes and/or fellow teammates to ensure they are up to speed. If the meeting was dependent on the missing teammate for a crucial discussion point/work period, the team will schedule an alternate time and 	discuss how to avoid the situation in the future. If a teammate is expecting to have a conflict, this conflict must be communicated by at latest 24 hours before the scheduled meeting time, to allow for the team to decide to proceed with the meeting shorthanded or reschedule. \\
 
 \subsubsection*{In Case of Emergency}
 
-\wss{What process will team members follow if they have an emergency and cannot
-attend a team meeting or complete their individual work promised for a team
-deliverable?}
+\textit{The ‘teammate’ used here to describe the teammate missing a meeting/not completing delegated independent work.} \\
+ 
+In case of a short notice absence from a meeting, the teammate must notify the rest of the team on MS Teams and/or the iMessage group chat as soon as possible outlining their expected absence and reason for missing the meeting.  \\
+
+In the case of an emergency impeding the completion of independent work, the teammate must notify the rest of the team on MS Teams and/or the iMessage group chat as soon as possible outlining the incomplete work, whether or not they expect to be able to complete it, and explanation. The team can delegate to other members if it impedes an official deadline. If the work violates only an internal deadline and time permits, an extension may be granted to the teammate. Every team member has an unofficial one-time pass for an internal deadline. Multiple offences will lead to a conversation with the team on how to avoid a reoccurrence. 
 
 \subsection*{Accountability and Teamwork}
 
@@ -247,23 +388,59 @@ want a conflict resolution plan?  Can adopt existing codes of conduct.}
 
 \subsubsection*{Stay on Track}
 
-\wss{What methods will be used to keep the team on track? How will your team
-ensure that members contribute as expected to the team and that the team
-performs as expected? How will your team reward members who do well and manage
-members whose performance is below expectations?  What are the consequences for
-someone not contributing their fair share?}
+\noindent\textbf{Meeting Deadlines:} The team will employ the use of the official capstone calendar to keep track of dates and deadlines. Each team member is responsible for ensuring that they aware of
+upcoming deadlines and potential postponement of these deadlines. Regardless, the team will collectively make an effort to communicate any reminders regarding dates, deadlines,
+and any announcements made my the professor through the team's private Microsoft Team's channel. \\
 
-\wss{You may wish to use the project management metrics collected for the TA and
-instructor for this.}
+\noindent\textbf{Tracking Progress:} GitHub issues will be created to split milestone tasks to ensure that the volume of work is evenly distributed. Brief progress check-ins will be done at the beginning of every weekly meeting, through which every 
+team member is required to share their current progress on their assigned tasks, including any concerns or difficulties that they may have encountered. The team reserves the right to adjust division of responsibilities if a task appears to be
+more difficult to complete than expected, or to accomodate for another team member's conflicting schedules, such as in the case when a team member may have external committments or circumstances that other team members do not share. Examples include
+conflicting midterm schedules, important medical appointments, etc. \\
 
-\wss{You can set target metrics for attendance, commits, etc.  What are the
-consequences if someone doesn't hit their targets?  Do they need to bring the
-coffee to the next team meeting?  Does the team need to make an appointment with
-their TA, or the instructor?  Are there incentives for reaching targets early?}
+\noindent\textbf{Rewards for High Performance:} Team members who perform beyond their expectations will be celebrated in team meetings and given the recognition they rightfully deserve, as well as assigned leadership roles in future milestones that better reflect their
+committment to the team. Following the conclusion of the project, the team may pitch in and buy the high performing individual any candy of their choice. Moreover, the team will make a collective request to the professor that the performing individual is given a bonus grade,
+though this may or may not be accepted by the professor. \\
+
+\noindent\textbf{Dealing with Unmet Expectations:}
+If no extenuating circumstances are present, and a team member is not meeting their workload committments for longer than two weeks or up to the closest milestone, then the following procedure will be followed to address unmet expectations: \\
+
+\begin{enumerate}
+  \item Unmet expectations will be addressed briefly as the first item on the agenda of the closest upcoming meeting. If the issue persists, or the team member does not attend the meeting
+  proceed to step 2.
+  \item The team will have an in-person meeting hosted before, during (if lecture slot is empty), or after lecture to discuss with the team member in question. If the issue persists, or the team member does not attend the meeting
+  proceed to step 3.
+  \item The team liaison will contact the TA to seek advice on handling the sitaution. If after applying the TA's advice the issue still persists, proceed to step 4.
+  \item The team liaison will contact the professor to address the situation.
+\end{enumerate}
+
+\noindent\textbf{Consequences for Under-performing:}
+The consequences for not meeting the expected workload committment include: 
+\begin{itemize}
+  \item Negative peer evaluation
+  \item Loss of grades
+  \item Academic dishonesty punishments
+\end{itemize}
+
+
+\noindent\textbf{Incentives for Meeting Deadlines Early:} Team members who meet deadlines early will be given the option
+to have a lighter workload for the next deliverable or milestone. This does not apply for the winter semester,
+as the team expects to have a tougher workload around that time period, due to final implementation deadlines. \\
+
+\noindent\textbf{Target Metrics:}
+Each team member is responsible to achieve the following metrics to show their contribution:
+\begin{itemize}
+  \item Attend 100\% of all meetings (except if there is an acceptable excuse)
+  \item Confirm review of all documents prior to submission, ensuring adherence to rubric
+  \item Contribute to roughly 20\% of the total volume of work, tracked through weekly number of closed issues.
+\end{itemize}
+
 
 \subsubsection*{Team Building}
 
-\wss{How will you build team cohesion (fun time, group rituals, etc.)? }
+\begin{itemize}
+  \item The team plans on participating in social activities outside of capstone meetings together. These events will be hosted at least once a semester and will occur either on campus or outside of campus (i.e. food, cafes, etc.).  
+\end{itemize}  
+
 
 \subsubsection*{Decision Making} 
 
