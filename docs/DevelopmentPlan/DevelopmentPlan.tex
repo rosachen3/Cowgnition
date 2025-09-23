@@ -1,7 +1,8 @@
 \documentclass{article}
-
+\usepackage{float}
 \usepackage{booktabs}
 \usepackage{tabularx}
+\usepackage{enumitem}
 
 \title{Development Plan\\\progname}
 
@@ -77,10 +78,51 @@ in-person.}
 
 \section{Team Member Roles}
 
-\wss{You should identify the types of roles you anticipate, like notetaker,
-leader, meeting chair, reviewer.  Assigning specific people to those roles is
-not necessary at this stage.  In a student team the role of the individuals will
-likely change throughout the year.}
+For the remainder of this project, we will work collaboratively as a team following assumed roles to develop the Cow-puter Vision project. These defined roles may have different assignees at different stages of the project, as team members may wish to rotate between the roles.
+The table below contains a list of all the roles and respective descriptions that are believed to be essential to ensure successful collaboration and achievement of the project goals:
+
+\subsection{Non-technical Roles}
+\begin{table}[ht]
+\centering
+\caption{Non-technical roles and descriptions}
+\label{tab:non-technical-roles}
+\begin{tabularx}{\textwidth}{lX}
+\toprule
+\textbf{Role} & \textbf{Description} \\
+\midrule
+
+Team Liaison & Acts as the main point of contact between the team and supervisors and stakeholders.  \\ \\
+Notetaker & Records meeting minutes, lecture notes, and sets agenda. \\ \\
+Meeting Chair & Facilitates team discussions, ensuring that the team remains focused on the meeting agenda without going off on tangents. \\ \\
+Backlog Manager & Creates, tracks, and assigns project-related GitHub issues based on deliverable sections and sets their priority based on deadlines and business value.\\ \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\noindent\textbf{Important Note:} Backlog Manager is not soley responsible for creating GitHub issues, and is only responsible for creating issues based on the deliverable sections. Example: Backlog
+Manager is responsible for creating issues such as "Complete section 1.1" and "Review section 1.1". Issues involving very specific tasks, 
+that are not clearly outlined or sectioned on deliverable templates, such as fixing specific bugs, fall under the responsibility of 
+the team member(s) who encounters the issue or task to begin with.\\
+
+\subsection{Technical Roles}
+\begin{table}[H]
+\centering
+\caption{Technical roles and descriptions}
+\label{tab:technical-roles}
+\begin{tabularx}{\textwidth}{lX}
+\toprule
+\textbf{Role} & \textbf{Description} \\
+\midrule
+
+Computer Vision \& ML Engineer & Responsible for leading design and development of the ML model, including model training and evaluation of the computer vision models using the preprocessed cow data, as well as ensuring that the model achieves satisfactory performance.\\ \\
+Data Pipeline Engineer &  Responsible for leading the collection, organization and preprocessing of the raw image/video data, ensuring it is properly labeled and cleaned, and preparing it into standardized datasets ready for model training and evaluation.\\ \\
+Backend \& Integration Engineer  & Responsible for leading the development of APIs or services that connect the trained model to the frontend, and manages a database to store any necessary data, ensuring smooth communication between components and managing data flow through the system \\ \\
+Frontend \& UI/UX Engineer  & Responsible for leading the design and development of interface for farmers to interact with, and ensure that the necessary results are clearly displayed to them. \\ \\
+Deployment \& Testing Lead & Responsible for ensuring that the model deploys to the target environment, testing and validating the accuracy and reliability of the system, running end-to-end tests, and fixing integration issues\\ \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
 
 \section{Workflow Plan}
 
@@ -252,19 +294,52 @@ want a conflict resolution plan?  Can adopt existing codes of conduct.}
 
 \subsubsection*{Stay on Track}
 
-\wss{What methods will be used to keep the team on track? How will your team
-ensure that members contribute as expected to the team and that the team
-performs as expected? How will your team reward members who do well and manage
-members whose performance is below expectations?  What are the consequences for
-someone not contributing their fair share?}
+\noindent\textbf{Meeting Deadlines:} The team will employ the use of the official capstone calendar to keep track of dates and deadlines. Each team member is responsible for ensuring that they aware of
+upcoming deadlines and potential postponement of these deadlines. Regardless, the team will collectively make an effort to communicate any reminders regarding dates, deadlines,
+and any announcements made my the professor through the team's private Microsoft Team's channel. \\
 
-\wss{You may wish to use the project management metrics collected for the TA and
-instructor for this.}
+\noindent\textbf{Tracking Progress:} GitHub issues will be created to split milestone tasks to ensure that the volume of work is evenly distributed. Brief progress check-ins will be done at the beginning of every weekly meeting, through which every 
+team member is required to share their current progress on their assigned tasks, including any concerns or difficulties that they may have encountered. The team reserves the right to adjust division of responsibilities if a task appears to be
+more difficult to complete than expected, or to accomodate for another team member's conflicting schedules, such as in the case when a team member may have external committments or circumstances that other team members do not share. Examples include
+conflicting midterm schedules, important medical appointments, etc. \\
 
-\wss{You can set target metrics for attendance, commits, etc.  What are the
-consequences if someone doesn't hit their targets?  Do they need to bring the
-coffee to the next team meeting?  Does the team need to make an appointment with
-their TA, or the instructor?  Are there incentives for reaching targets early?}
+\noindent\textbf{Rewards for High Performance:} Team members who perform beyond their expectations will be celebrated in team meetings and given the recognition they rightfully deserve, as well as assigned leadership roles in future milestones that better reflect their
+committment to the team. Following the conclusion of the project, the team may pitch in and buy the high performing individual any candy of their choice. Moreover, the team will make a collective request to the professor that the performing individual is given a bonus grade,
+though this may or may not be accepted by the professor. \\
+
+\noindent\textbf{Dealing with Unmet Expectations:}
+If no extenuating circumstances are present, and a team member is not meeting their workload committments for longer than two weeks or up to the closest milestone, then the following procedure will be followed to address unmet expectations: \\
+
+\begin{enumerate}
+  \item Unmet expectations will be addressed briefly as the first item on the agenda of the closest upcoming meeting. If the issue persists, or the team member does not attend the meeting
+  proceed to step 2.
+  \item The team will have an in-person meeting hosted before, during (if lecture slot is empty), or after lecture to discuss with the team member in question. If the issue persists, or the team member does not attend the meeting
+  proceed to step 3.
+  \item The team liaison will contact the TA to seek advice on handling the sitaution. If after applying the TA's advice the issue still persists, proceed to step 4.
+  \item The team liaison will contact the professor to address the situation.
+\end{enumerate}
+
+\noindent\textbf{Consequences for Under-performing:}
+The consequences for not meeting the expected workload committment include: 
+\begin{itemize}
+  \item Negative peer evaluation
+  \item Loss of grades
+  \item Academic dishonesty punishments
+\end{itemize}
+
+
+\noindent\textbf{Incentives for Meeting Deadlines Early:} Team members who meet deadlines early will be given the option
+to have a lighter workload for the next deliverable or milestone. This does not apply for the winter semester,
+as the team expects to have a tougher workload around that time period, due to final implementation deadlines. \\
+
+\noindent\textbf{Target Metrics:}
+Each team member is responsible to achieve the following metrics to show their contribution:
+\begin{itemize}
+  \item Attend 100\% of all meetings (except if there is an acceptable excuse)
+  \item Confirm review of all documents prior to submission, ensuring adherence to rubric
+  \item Contribute to roughly 20\% of the total volume of work, tracked through weekly number of closed issues.
+\end{itemize}
+
 
 \subsubsection*{Team Building}
 
