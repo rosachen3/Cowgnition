@@ -31,25 +31,49 @@ Date2 & Name(s) & Description of changes\\
 
 \section{Problem Statement}
 
-\wss{You should check your problem statement with the
-\href{https://github.com/smiths/capTemplate/blob/main/docs/Checklists/ProbState-Checklist.pdf}
-{problem statement checklist}.} 
-
-\wss{You can change the section headings, as long as you include the required
-information.}
-
 \subsection{Problem}
+Dairy and cattle farmers are responsible for the health and wellness of thousands of cows. The condition of the livestock in their care directly influences profit margins and productivity of the farm as a whole. Monitoring health conditions and behaviour must be done to minimize consequences of illness and injury, but the process is labour intensive and time consuming, making it difficult to track animal health, infections, weight, and productivity effectively. Not only do any minuscule changes need to be noticed within dozens of cows, the cows then need to be identified often by the farmer walking through the pen to check an ear tag. The length and complexity of the process make monitoring cow wellness incredibly difficult. The project aims to provide a solution that simplifies the monitoring process and provides an early indication of health issues, improving animal welfare and therefore farm productivity. \\ 
 
 \subsection{Inputs and Outputs}
+\begin{itemize}
+    \item Input: Video feed showing cows where they live at a farm. Setting to be determined.
+    \item Output: User readable data reporting cow attributes and/or behaviour. 
+\end{itemize} 
 
-\wss{Characterize the problem in terms of ``high level'' inputs and outputs.  
-Use abstraction so that you can avoid details.}
 
 \subsection{Stakeholders}
+\subsubsection{Direct Stakeholders}
+\begin{enumerate}
+    \item \textbf{Farmers:} They are the primary users of this software as this project aims to improve the efficiency of their workflows.
+    \item \textbf{Luke Schuurman (Supervisor and CATTLEytics Inc. Representative):} Luke has a vested interest in the development of this project. He will
+    play a crucial role directing our team throughout the project. He will be the main point of contact to garner a shared understanding of the vision CATTLEytics Inc. has
+    for this project, and as such he will provide us with the necessary resources, including video data, to ensure the success of this project.
+\end{enumerate}
+
+\subsubsection{Indirect Stakeholders}
+\begin{enumerate}
+    \item \textbf{Food and Agriculture Regulatory Bodies:} They establish rules on animal welfare, food safety and traceability that influence the design and operation of our product.
+    \item \textbf{Dairy and Meat Processing Companies, QA Division:} They rely on farms to provide the necessary raw materials that are compliant with safety standards.
+\end{enumerate}
+
 
 \subsection{Environment}
+\subsubsection{Software Environment}
+Software required for this system to work as expected:
+\begin{itemize}
+    \item Cloud-based environment to train model (Google Colab, AWS etc.)
+    \item Web-based environment to show alerts and results
+\end{itemize}
 
-\wss{Hardware and Software Environment}
+\subsubsection{Hardware Environment}
+Hardware required for this system to work as expected:
+\begin{itemize}
+    \item High-resolution IP or Smart IoT-based camera systems with edge compute devices installed in the farm
+    \item Devices for farmers to access any real-time alerts or results of the model
+    \item On-premise server to archive videos
+\end{itemize}
+\textbf{NOTE:} This will be provided and installed by CATTLEytics. Inc in the farms. This is the infrastructure that the system will use to operate.
+
 
 \section{Goals}
 
@@ -63,9 +87,15 @@ The group will develop a user instructional video and a user manual as supplemen
 
 \section*{Appendix --- Reflection}
 
-\wss{Not required for CAS 741}
-
-\input{../Reflection.tex}
+\textbf{Claire Nielsen, Karim Elbasiouni}
+\begin{enumerate}
+    \item \textit{What went well while writing this deliverable?}\\
+    For a first deliverable, the team collaborated well. Since the project is still so broad the team was able to brainstorm together how to best approach a solution to our problem statement. The team was able to schedule meetings to work together with minimal conflict, and the collaborative periods helped make sure all members unanimously agreed and had a good idea of how to proceed. 
+    \item \textit{What pain points did you experience during this deliverable, and how did you resolve them?}\\
+    One minor obstacle the team hit was the meeting schedule. This week the team was able to be flexible about meeting times, but when attempting to fill out a poll with availability for a recurring meeting there didn’t appear to be a time that worked for everyone. The team was able to decide on a meeting slot and willingness to be flexible in the future. Another problem the team had was the late feedback from our supervisor. There were some questions to be clarified, and a response was not received until late on the due date, putting a time crunch on some sections of the document. 
+    \item \textit{How did you and your team adjust the scope of your goals to ensure they are suitable for a Capstone project (not overly ambitious but also of appropriate complexity for a senior design project)?}\\
+    The team collaborated on the problem statement and goals for the project bearing in mind that they should be abstract, and not overly ambitious. While the team already has ideas of goals for the system and how exactly to solve the stated problem, they are not included. These documents are intended to be an early stage description of the problem, not a detailed plan for the solution. By keeping the goals and problem statement abstract, there should be fewer design changes later in development. The goals chosen accurately represent a minimum viable product that solves the problem statement, without detail as to how. These goals should be met to produce an adequate solution, and there is room to extend to meet the stretch goals if time and resources permit.
+\end{enumerate}
 
 \begin{enumerate}
     \item What went well while writing this deliverable? 
