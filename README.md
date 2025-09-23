@@ -4,7 +4,8 @@
 
 **Date of project start:** September 19th, 2025
 
-This project is ...
+This project is #25: Cow-puter Vision:  Animal Detection on Dairy
+Farms
 
 **The folders and files for this project are as follows:**
 
