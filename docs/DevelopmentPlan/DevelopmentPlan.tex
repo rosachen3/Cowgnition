@@ -3,6 +3,7 @@
 \usepackage{booktabs}
 \usepackage{tabularx}
 \usepackage{enumitem}
+\usepackage{float}
 
 \title{Development Plan\\\progname}
 
@@ -144,20 +145,75 @@ Formal feedback on a teammate’s code should be done during the review phase of
 
 \section{Project Decomposition and Scheduling}
 
+\subsection{Github Projects}
+Github Projects will be used for project management of tasks. The group will use the Kanban board feature on Github projects to assign tasks. Tasks will be categorized under milestones and will be assigned to individual team members. They can take on one of three states: 
 \begin{itemize}
-  \item How will you be using GitHub projects?
-  \item Include a link to your GitHub project
+  \item \underline{To do:} Tasks that are backlogged and are not currently being worked on. 
+  \item \underline{In progress:} Tasks that are currently being worked on.
+  \item \underline{Done:} Completed tasks that have been reviewed by another member and approved.
 \end{itemize}
 
-\wss{How will the project be scheduled?  This is the big picture schedule, not
-details. You will need to reproduce information that is in the course outline
-for deadlines.}
+\noindent Github Issues will also be used to track team meeting agendas, supervisor meetings, lecture notes, TA meetings, and peer reviews. The link to the Github repository where the project can be found will be linked \underline{\href{https://github.com/rosachen3/Cowgnition/tree/main}{here}}.
+
+\subsection{Schedule}
+The project will follow the major deadlines outlined below. Each task will have subtasks assigned as the semester progresses. These can be tracked in the Github Projects Kanban Board.
+
+\begin{table}[H]
+
+\centering
+\caption{List of Milestone Deadlines}
+\begin{tabularx}{\textwidth}{|l|X|}
+\hline
+\textbf{Milestone} & \textbf{Due Date} \\
+\hline
+Team formation and Project Selection & September 15 \\
+\hline
+Problem Statement, Goals and Development Plan & September 22 \\
+\hline
+SRS + HA & October 6 \\
+\hline
+V\&V Plan Revision 0 & October 27 \\
+\hline
+Design Documentation Revision -1 & November 10 \\
+\hline
+Proof of Concept Demonstration & November 17 \\
+\hline
+Design Document Revision 0 & January 19 \\
+\hline
+Revision 0 Presentation & February 2 \\
+\hline
+V and V Report and Extras Revision 0 & March 9 \\
+\hline
+Final Demonstration (Revision 1) & March 23 \\
+\hline
+Final Documentation (Revision 1) & April 6 \\
+\hline
+EXPO Demonstration & TBD \\
+\hline
+\end{tabularx}
+\end{table}
 
 \section{Proof of Concept Demonstration Plan}
 
-What is the main risk, or risks, for the success of your project?  What will you
-demonstrate during your proof of concept demonstration to convince yourself that
-you will be able to overcome this risk?
+CATTLEytics will be providing video training data from local partnering farmers. The videos will be used to analyze and categorize cows based on behaviours and physical traits.  
+
+\vspace{1em}
+
+\noindent The following risks have been identified to evaluate the feasibility of the project. 
+
+\vspace{1em}
+
+\begin{itemize}
+  \item \noindent \textbf{Farmer Partnerships:} CATTLEytics is a small startup company. Currently, there is no video training data as resources are provided as needed when developing new features. There are local farmers who have agreed to send video data, but there is a risk of delays which could slow down development. 
+  \item \noindent \textbf{Data Quality and Quantity:} Machine learning algorithms depend heavily on the data set. There is a risk that the video data collected from farmers will be of low quality or quantity, reducing the accuracy and reliability of the machine learning model. For the Proof of Concept, this risk can be mitigated by using publicly available video data of cows. 
+  \item \noindent \textbf{GPU Resources:} The CAS department at McMaster offers departmental resources for machine learning purposes. As these resources are limited, there is a risk that these resources may not be available when the model needs to be trained. A possible risk mitigation strategy is to leverage the use of cloud-based GPU resources to supplement departmental resources if needed.
+  \item \noindent \textbf{Environmental Requirements:} Farmers in rural communities may have limited hardware and connectivity. If a system is too resource intensive, farmers may face challenges using the system effectively. For the Proof of Concept, this risk can be mitigated by demonstrating the usage of processing and analyzing collected video data in a controlled environment, without requiring real-time analysis. 
+  \item \noindent \textbf{Implementation:} Team members have limited experience with machine learning problems. As a result, researching about existing open-source models and fundamentals may lead to delays. However, the project will be supervised by Luke Schuurman from CATTLEytics who can provide technical advice from a software engineering standpoint. 
+  \item \noindent \textbf{Licensing:} Many popular frameworks and pretrained models have licenses that prohibit commercial use. While this may not impact the Proof of Concept, the licenses can become a risk as the project progresses into a commercially available product. This risk can be mitigated by documenting the licenses of all tools and commercially available alternatives.
+\end{itemize}
+
+\noindent \textbf{POC Plan:} The Proof of Concept will show that the system is functional and that the risks mentioned can be mitigated. This will ensure that the project can be completed on schedule. 
+The demonstration will show that the machine learning model can successfully identify and classify one cow parameter. The demonstration will use a small dataset to validate the system, proving that the model can successfully preprocess and train data using the available GPU resources. The results of the model will be presented in a user-friendly format for farmers to easily access. 
 
 \section{Expected Technology}
 
@@ -251,8 +307,10 @@ interviews, or to get an A+, etc.}
 
 \subsubsection*{Expectations}
 
-\wss{What are your team's expectations regarding meeting attendance (being on
-time, leaving early, missing meetings, etc.)?}
+\begin{itemize}
+  \item \textbf{Weekly Meetings}: With the exception of acceptable excuses and emergencies, team members are expected to attend all meetings. This includes team, supervisor, and TA meetings. Attendance will be logged through the usage of Github Issues. 
+  \item \textbf{Punctuality}: It is expected that all team members arrive on time to meetings. If a group member is expected to be more than 15 minutes late or require to leave early for a meeting, the group should be notified through the designated Microsoft Teams or SMS group chat as soon as possible. If a team member needs to miss a meeting, the member must notify the group with a valid reason the day before. They are responsible for reading the meeting minutes, and organizing an alternative time individually or with another team member to catch up on missed work.
+\end{itemize}
 
 \subsubsection*{Acceptable Excuse}
 
@@ -343,7 +401,10 @@ Each team member is responsible to achieve the following metrics to show their c
 
 \subsubsection*{Team Building}
 
-\wss{How will you build team cohesion (fun time, group rituals, etc.)? }
+\begin{itemize}
+  \item The team plans on participating in social activities outside of capstone meetings together. These events will be hosted at least once a semester and will occur either on campus or outside of campus (i.e. food, cafes, etc.).  
+\end{itemize}  
+
 
 \subsubsection*{Decision Making} 
 
