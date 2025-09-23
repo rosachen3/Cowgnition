@@ -2,8 +2,8 @@
 \usepackage{float}
 \usepackage{booktabs}
 \usepackage{tabularx}
-\usepackage{enumitem}
 \usepackage{float}
+\usepackage{enumitem}
 
 \title{Development Plan\\\progname}
 
@@ -31,45 +31,46 @@ September 22, 2025 & Claire, Karim, Safwan, Sylvia, Rosa & Initial Draft\\
 
 \newpage{}
 
-\wss{Put your introductory blurb here.  Often the blurb is a brief roadmap of
-what is contained in the report.}
-
-\wss{Additional information on the development plan can be found in the
-\href{https://gitlab.cas.mcmaster.ca/courses/capstone/-/blob/main/Lectures/L02b_POCAndDevPlan/POCAndDevPlan.pdf?ref_type=heads}
-{lecture slides}.}
+\noindent This document outlines our team member expectations, guidelines and expected project plan from technology to meeting format. Cow-puter Vision aims to streamline Canadian farmers' day-to-day tasks with a machine learning solution focused on detecting cow attributes and/or behaviours. 
 
 \section{Confidential Information?}
 
-\wss{State whether your project has confidential information from industry, or
-not.  If there is confidential information, point to the agreement you have in
-place.}
+Our project has confidential information from industry. At the moment, we are waiting to recieve a formal non-disclosure agreement from our industry advisor.
 
-\wss{For most teams this section will just state that there is no confidential
-information to protect.}
 \section{IP to Protect}
 
-\wss{State whether there is IP to protect.  If there is, point to the agreement.
-All students who are working on a project that requires an IP agreement are also
-required to sign the ``Intellectual Property Guide Acknowledgement.''}
+Our project involves IP to protect. Our team agrees to sign the "Intellectual Property Guide Acknowledgement". At the moment, we are waiting for guidance from our industry advisor regarding IP documentation
 
 \section{Copyright License}
 
-\wss{What copyright license is your team adopting.  Point to the license in your
-repo.}
+Our team will not assign a copyright license to the repository at the moment. We will follow licensing requirements as specified by our industry advisor.
 
 \section{Team Meeting Plan}
+\textbf{Team meetings} will be held once a week on Mondays at 6pm for an hour to share general updates and to delegate tasks. The meeting will be moved to an open lecture time slot if and only if a lecture is not scheduled on a given week and the team is available during that lecture slot. Meetings will be held online on Teams if they are scheduled outside of lecture time. Meetings will be held in person if they are scheduled during lecture time. Whether a meeting is scheduled on Monday at 6pm or during a lecture slot will be confirmed on the Sunday before the week starts.
 
-\wss{How often will you meet? where?}
+\vspace{1em}
 
-\wss{If the meeting is a physical location (not virtual), out of an abundance of
-caution for safety reasons you shouldn't put the location online}
+\noindent \textbf{Additional meetings} may be scheduled on demand during empty lecture slots or during a time when everyone required for said meeting is available.
 
-\wss{How often will you meet with your industry advisor?  when?  where?}
+\vspace{1em}
 
-\wss{Will meetings be virtual?  At least some meetings should likely be
-in-person.}
+\noindent \textbf{Weekly meetings with the industry advisor} will be held virtually on Teams weekly on an agreed upon day and time. 
 
-\wss{How will the meetings be structured?  There should be a chair for all meetings.  There should be an agenda for all meetings.}
+\vspace{1em}
+
+\noindent \textbf{Meeting Format:}
+The Notetaker will share the meeting agenda in the Teams channel the day before the meeting is scheduled for. The Backlog Manager will create a GitHub Issue for the meeting. Team meetings will be led by the Meeting Chair and will follow the agenda template provided below:
+\begin{itemize}
+  \item \textbf{10-15 minutes:} Individual updates on personal tasks (updating kanban board on GitHub)
+  \item \textbf{40 minutes:} Group work (project deliverables/decision making/brainstorming)
+  \item \textbf{5-10 minutes:} Task delegation for the week (updating kanban board on GitHub)
+\end{itemize}
+
+\noindent Industry advisor meetings will follow the breakdown provided below:
+\begin{itemize}
+  \item \textbf{10-15 minutes:} Individual updates on personal tasks and plan for upcoming week
+  \item \textbf{30 minutes:} Q\&A with Industry Advisor
+\end{itemize}
 
 \section{Team Communication Plan}
 Our team's means of communication will primarily comprise of a Microsoft Teams group chat, an iMessage group chat, and GitHub issues. Our Microsoft Teams group chat is suited for discussions about the project.
@@ -227,37 +228,81 @@ The demonstration will show that the machine learning model can successfully ide
 
 \section{Expected Technology}
 
-\wss{What programming language or languages do you expect to use?  What external
-libraries?  What frameworks?  What technologies.  Are there major components of
-the implementation that you expect you will implement, despite the existence of
-libraries that provide the required functionality.  For projects with machine
-learning, will you use pre-trained models, or be training your own model?  }
+This project will have a machine learning aspect, along with a user interface or dashboard, and a data processing pipeline. The technologies below were selected initially, however, there will be changes as the project progresses due to stakeholder constraints and future design choices.
 
-\wss{The implementation decisions can, and likely will, change over the course
-of the project.  The initial documentation should be written in an abstract way;
-it should be agnostic of the implementation choices, unless the implementation
-choices are project constraints.  However, recording our initial thoughts on
-implementation helps understand the challenge level and feasibility of a
-project.  It may also help with early identification of areas where project
-members will need to augment their training.}
+\begin{table}[H]
+\caption{Languages and Libraries} \label{TblLanguagesAndLibraries}
+\begin{tabularx}{\textwidth}{p{3.5cm}p{7cm}}
+\toprule
+\textbf{Technology} & \textbf{Explanation}\\
+\midrule
+Python & Most widely-used language for machine learning and dashboard development.\\
+\addlinespace
+NumPy, Pandas, Matplotlib & Common libraries used for data manipulation visualization.\\
+\bottomrule
+\end{tabularx}
+\end{table}
 
-Topics to discuss include the following:
+\begin{table}[!htbp]
+\caption{Machine Learning} \label{TblMachineLearning}
+\begin{tabularx}{\textwidth}{p{3.5cm}p{7cm}}
+\toprule
+\textbf{Technology} & \textbf{Explanation}\\
+\midrule
+PyTorch, TensorFlow & Widely used frameworks for machine learning.\\
+\addlinespace
+YOLOv8, Faster R-CNN, DETR & Object detection architectures to be used for custom detectors.\\
+\addlinespace
+OpenCV & Computer vision library. Includes object detection algorithms.\\
+\addlinespace
+ImageNet-1000 & Dataset containing 1000 different categories. May be a good starting point for cow detection.\\
+\bottomrule
+\end{tabularx}
+\end{table}
 
-\begin{itemize}
-\item Specific programming language
-\item Specific libraries
-\item Pre-trained models
-\item Specific linter tool (if appropriate)
-\item Specific unit testing framework
-\item Investigation of code coverage measuring tools
-\item Specific plans for Continuous Integration (CI), or an explanation that CI
-  is not being done
-\item Specific performance measuring tools (like Valgrind), if
-  appropriate
-\item Tools you will likely be using?
-\end{itemize}
+\begin{table}[!htbp]
+\caption{Storage and Environment} \label{TblStorageAndEnvironment}
+\begin{tabularx}{\textwidth}{p{3cm}p{7.5cm}}
+\toprule
+\textbf{Technology} & \textbf{Explanation}\\
+\midrule
+PostgreSQL & To store data on cow behaviour and/or attributes.\\
+\addlinespace
+Docker & Allows us to build and deploy our application.\\
+\bottomrule
+\end{tabularx}
+\end{table}
 
-\wss{git, GitHub and GitHub projects should be part of your technology.}
+\begin{table}[!htbp]
+\caption{Development Tools and Testing} \label{TblDevelopmentToolsAndTesting}
+\begin{tabularx}{\textwidth}{p{3cm}p{7cm}}
+\toprule
+\textbf{Technology} & \textbf{Explanation}\\
+\midrule
+Git & For version control and organization.\\
+\addlinespace
+GitHub Projects, GitHub Issues & For project tracking and task delegation.\\
+\addlinespace
+GitHub Actions & May be used for CI/CD pipeline.\\
+\addlinespace
+Pytest & Python testing framework to be used in our CI/CD pipeline.\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\begin{table}[!htbp]
+\caption{Front-End} \label{TblFrontEnd}
+\begin{tabularx}{\textwidth}{p{3cm}p{7cm}}
+\toprule
+\textbf{Technology} & \textbf{Explanation}\\
+\midrule
+Streamlit or React.js & Web-based Front-end options based on the desired level of complexity in our UI.\\
+\addlinespace
+PyQt/PySide & Option for a desktop standalone app.\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
 
 \section{Coding Standard}
 
@@ -278,7 +323,7 @@ The team is expecting to code in Python and follow the PEP8 coding standard. To 
 
 \section*{Appendix --- Reflection}
 
-\textbf{Claire Nielsen, Karim Elbasiouni, Rosa Chen}
+\textbf{Claire Nielsen, Karim Elbasiouni, Rosa Chen, Sylvia Kamel}
 \begin{enumerate}
     \item \textit{Why is it important to create a development plan prior to starting the project?}\\
     It is important to create a development plan prior to starting the project for several reasons. First, it ensures the team is on the same page about the problem to be solved. Second, the development plan will serve as a guideline, not only for technical practices such as coding standards, but also decision making and collaborating as a team.
@@ -319,17 +364,8 @@ The team is expecting to code in Python and follow the PEP8 coding standard. To 
 
 \section*{Appendix --- Team Charter}
 
-\wss{borrows from
-\href{https://engineering.up.edu/industry_partnerships/files/team-charter.pdf}
-{University of Portland Team Charter}}
-
 \subsection*{External Goals}
-
-\wss{What are your team's external goals for this project? These are not the
-goals related to the functionality or quality fo the project.  These are the
-goals on what the team wishes to achieve with the project.  Potential goals are
-to win a prize at the Capstone EXPO, or to have something to talk about in
-interviews, or to get an A+, etc.}
+Our team hopes to have a positive impact on the targeted users of this product by making their day-to-day tasks easier so they can focus on what matters most on their farms. We also want to gain practical and hands-on experience in the machine learning domain. Artificial Intelligence is a field we all find fascinating, but have yet to explore in depth. Lastly, we look forward to making this a positive learning experience where we can all be proud of the work we produce by the end of the year.
 
 \subsection*{Attendance}
 
@@ -380,10 +416,23 @@ their approaches towards their deliverables.
 
 \subsubsection*{Attitude}
 
-\wss{What are your team's expectations regarding team members' ideas,
-interactions with the team, cooperation, attitudes, and anything else regarding
-team member contributions?  Do you want to introduce a code of conduct?  Do you
-want a conflict resolution plan?  Can adopt existing codes of conduct.}
+We want to create an environment where all ideas are welcome and creative thinking is encouraged. Below is a list of \textbf{team expectations:}
+
+\begin{enumerate}
+    \item \textbf{Professionalism:} Team members should deliver high quality work and remain punctual.
+    \item \textbf{Respect:} All ideas will be given fair attention and team members will respect opposing ideas.
+    \item \textbf{Cooperation:} Everyone on the team is expected to contribute equally to project deliverables and come to meetings prepared.
+    \item \textbf{Attitude:} Everyone on the team should maintain a positive, and encouraging attitude to maintain productivity and a low-stress environment.
+\end{enumerate}
+
+\noindent In the case that any conflict arises between team members, the following \textbf{conflict resolution plan} will be executed:
+
+\begin{enumerate}
+    \item \textbf{Communication:} the first stage of conflict resolution is to communicate the issue one-on-one with the involved team member to define the problem.
+    \item \textbf{Find a middle ground:} The involved team members should try to understand each other's perspectives and aim to reach a positive solution.
+    \item \textbf{Escalate:} In the case a middle ground cannot be reached, the team will escalate and communicate the issue with Dr. Smith.
+\end{enumerate}
+
 
 \subsubsection*{Stay on Track}
 
