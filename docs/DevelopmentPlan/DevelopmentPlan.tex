@@ -144,9 +144,25 @@ EXPO Demonstration & TBD \\
 
 \section{Proof of Concept Demonstration Plan}
 
-What is the main risk, or risks, for the success of your project?  What will you
-demonstrate during your proof of concept demonstration to convince yourself that
-you will be able to overcome this risk?
+CATTLEytics will be providing video training data from local partnering farmers. The videos will be used to analyze and categorize cows based on behaviours and physical traits.  
+
+\vspace{1em}
+
+\noindent The following risks have been identified to evaluate the feasibility of the project. 
+
+\vspace{1em}
+
+\begin{itemize}
+  \item \noindent \textbf{Farmer Partnerships:} CATTLEytics is a small startup company. Currently, there is no video training data as resources are provided as needed when developing new features. There are local farmers who have agreed to send video data, but there is a risk of delays which could slow down development. 
+  \item \noindent \textbf{Data Quality and Quantity:} Machine learning algorithms depend heavily on the data set. There is a risk that the video data collected from farmers will be of low quality or quantity, reducing the accuracy and reliability of the machine learning model. For the Proof of Concept, this risk can be mitigated by using publicly available video data of cows. 
+  \item \noindent \textbf{GPU Resources:} The CAS department at McMaster offers departmental resources for machine learning purposes. As these resources are limited, there is a risk that these resources may not be available when the model needs to be trained. A possible risk mitigation strategy is to leverage the use of cloud-based GPU resources to supplement departmental resources if needed.
+  \item \noindent \textbf{Environmental Requirements:} Farmers in rural communities may have limited hardware and connectivity. If a system is too resource intensive, farmers may face challenges using the system effectively. For the Proof of Concept, this risk can be mitigated by demonstrating the usage of processing and analyzing collected video data in a controlled environment, without requiring real-time analysis. 
+  \item \noindent \textbf{Implementation:} Team members have limited experience with machine learning problems. As a result, researching about existing open-source models and fundamentals may lead to delays. However, the project will be supervised by Luke Schuurman from CATTLEytics who can provide technical advice from a software engineering standpoint. 
+  \item \noindent \textbf{Licensing:} Many popular frameworks and pretrained models have licenses that prohibit commercial use. While this may not impact the Proof of Concept, the licenses can become a risk as the project progresses into a commercially available product. This risk can be mitigated by documenting the licenses of all tools and commercially available alternatives.
+\end{itemize}
+
+\noindent \textbf{POC Plan:} The Proof of Concept will show that the system is functional and that the risks mentioned can be mitigated. This will ensure that the project can be completed on schedule. 
+The demonstration will show that the machine learning model can successfully identify and classify one cow parameter. The demonstration will use a small dataset to validate the system, proving that the model can successfully preprocess and train data using the available GPU resources. The results of the model will be presented in a user-friendly format for farmers to easily access. 
 
 \section{Expected Technology}
 
